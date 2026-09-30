@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Upload from './pages/Upload';
+import Profile from './pages/Profile';
 import Admin from './pages/Admin';
 import ProtectedRoute from './components/ProtectedRoute';
 import { initStorage } from './lib/auth';
@@ -24,6 +25,14 @@ export default function App() {
           element={
             <ProtectedRoute type="approved">
               <Upload />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute type="approved">
+              <Profile />
             </ProtectedRoute>
           }
         />
